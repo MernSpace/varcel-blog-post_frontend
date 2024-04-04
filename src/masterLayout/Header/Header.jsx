@@ -15,23 +15,35 @@ const Header = () => {
                         </div>
                         <menu className='hidden items-center lg:flex'>
                             <ul className='flex  gap-[40px]'>
-                                <li className='navActive'>
-                                    <NavLink to='/'>Home</NavLink>
+                                <li className='navNotActive'>
+                                    <NavLink to='/'   className={({ isActive, isPending }) =>
+                                        isPending ? "navNotActive" : isActive ? "navActive" : ""
+                                    }>Home</NavLink>
+                                </li>
+                                <li className='navNotActive' >
+                                    <NavLink to='/about-us' className={({ isActive, isPending }) =>
+                                        isPending ? "navNotActive" : isActive ? "navActive" : ""
+                                    }>About Us</NavLink>
                                 </li>
                                 <li className='navNotActive'>
-                                    <NavLink to='/about-us'>About Us</NavLink>
+                                    <NavLink to='/protfolio' className={({ isActive, isPending }) =>
+                                        isPending ? "navNotActive" : isActive ? "navActive" : ""
+                                    }>Portfolio</NavLink>
                                 </li>
                                 <li className='navNotActive'>
-                                    <NavLink to='/protfolio'>Portfolio</NavLink>
+                                    <NavLink to='/service' className={({ isActive, isPending }) =>
+                                        isPending ? "navNotActive" : isActive ? "navActive" : ""
+                                    }>Service</NavLink>
                                 </li>
                                 <li className='navNotActive'>
-                                    <NavLink to='/service'>Service</NavLink>
+                                    <NavLink to='/blog' className={({ isActive, isPending }) =>
+                                        isPending ? "navNotActive" : isActive ? "navActive" : ""
+                                    }>Blog</NavLink>
                                 </li>
                                 <li className='navNotActive'>
-                                    <NavLink to='/blog'>Blog</NavLink>
-                                </li>
-                                <li className='navNotActive'>
-                                    <NavLink to='/contact'>Contact</NavLink>
+                                    <NavLink to='/contact' className={({ isActive, isPending }) =>
+                                        isPending ? "navNotActive" : isActive ? "navActive" : ""
+                                    }>Contact</NavLink>
                                 </li>
 
                             </ul>

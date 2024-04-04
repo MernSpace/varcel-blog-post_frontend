@@ -1,14 +1,13 @@
 import React from 'react';
-import AdminLogin from '../component/admin/AdminLogin';
+import ForgetEmail from "../component/admin/ForgetEmail.jsx";
 import MasterLayout from "../masterLayout/layout/MasterLayout.jsx";
 
-const AdminLoginPage = () => {
+const ForgetPasswordPage = () => {
     return (
         <MasterLayout>
-           <AdminLogin/>
-
+            <ForgetEmail/>
         </MasterLayout>
     );
 };
 
-export default AdminLoginPage;
+export default ForgetPasswordPage;

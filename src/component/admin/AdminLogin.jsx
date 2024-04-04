@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Logo from '../../assets/image/logo.svg'
+import {Link} from "react-router-dom";
 
 
 const AdminLogin = () => {
@@ -40,8 +41,11 @@ const AdminLogin = () => {
                             <div className='pb-2 pt-4'>
                                <button className='btn block'>Submit</button>
                             </div>
-                            
                         </form>
+                        <div className='flex gap-3' >
+                            <Link to='/forget-password'><h2>Forget Password ?</h2></Link>
+                            <Link to='/create-accoutn'><h2>Create Account !</h2></Link>
+                        </div>
                     </div>
                 </div>
 
