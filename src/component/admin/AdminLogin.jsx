@@ -1,9 +1,23 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Logo from '../../assets/image/logo.svg'
 import {Link} from "react-router-dom";
+import AdminStore from '../../store/adminStore/adminStore';
 
 
 const AdminLogin = () => {
+
+
+    const {AdminLoginFormData,AdminLoginFormOnChange,AdminLoginRequest} = AdminStore()
+    const onSubmitBtnClick=async()=>{
+        let res = await AdminLoginRequest(AdminLoginFormData);
+        if(res){
+            window.location.href=('/')
+        }
+    }
+
+   
+
+
     return (
         <Fragment>
             <div className='flex min-h-screen items-stretch text-white '>
@@ -31,17 +45,17 @@ const AdminLogin = () => {
                             <h2 className='text-[30px]'>Wellcome!</h2>
                         </div>
                         <p className='text-gray-100'>Sign Into Your Account</p>
-                        <form className=' w-full px-4 sm:w-2/3 lg:px-0'>
+                        <div className=' w-full px-4 sm:w-2/3 lg:px-0'>
                             <div className='pb-2 pt-4'>
-                                <input type=" text" placeholder='Email' className='block w-full rounded-sm bg-black p-4 text-lg' />
+                                <input value={AdminLoginFormData.email}  onChange={(e)=>{AdminLoginFormOnChange("email",e.target.value)}} type=" text" placeholder='Email' className='block w-full rounded-sm bg-black p-4 text-lg' />
                             </div>
                             <div className='pb-2 pt-4'>
-                                <input type=" text" placeholder='Password' className='block w-full rounded-sm bg-black p-4 text-lg' />
+                                <input value={AdminLoginFormData.password}  onChange={(e)=>{AdminLoginFormOnChange("password",e.target.value)}} type=" text" placeholder='Password' className='block w-full rounded-sm bg-black p-4 text-lg' />
                             </div>
                             <div className='pb-2 pt-4'>
-                               <button className='btn block'>Submit</button>
+                               <button className='btn block' onClick={onSubmitBtnClick}>Submit</button>
                             </div>
-                        </form>
+                        </div>
                         <div className='flex gap-3' >
                             <Link to='/forget-password'><h2>Forget Password ?</h2></Link>
                             <Link to='/create-accoutn'><h2>Create Account !</h2></Link>

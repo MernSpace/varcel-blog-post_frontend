@@ -8,6 +8,7 @@ import ProtfolioPage from "./pages/ProtfolioPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
 import BolgPage from "./pages/BolgPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
+import OptPage from "./pages/optPage.jsx";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
 
         <Route path='/admin-login' element={<AdminLoginPage/>} />
         <Route path='/forget-password' element={<ForgetPasswordPage/>} />
+        <Route path='/opt' element={<OptPage/>} />
       </Routes>
     </BrowserRouter>
   );

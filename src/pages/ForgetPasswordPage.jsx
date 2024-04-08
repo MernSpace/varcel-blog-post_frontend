@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import ForgetEmail from "../component/admin/ForgetEmail.jsx";
-import MasterLayout from "../masterLayout/layout/MasterLayout.jsx";
+
 
 const ForgetPasswordPage = () => {
     return (
-        <MasterLayout>
+        <Fragment>
             <ForgetEmail/>
-        </MasterLayout>
+        </Fragment>
     );
 };
 
