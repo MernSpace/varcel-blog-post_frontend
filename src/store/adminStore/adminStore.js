@@ -19,9 +19,7 @@ const AdminStore=create((set)=>({
     },
 
     AdminLoginRequest:async(postBody)=>{
-        set({isFormSubmit:true})
         let res=await axios.post(`http://localhost:5050/api/v1/Admin-Login`,postBody);
-        set({isFormSubmit:false})
         return res.data['status'] === "success";
     },
 

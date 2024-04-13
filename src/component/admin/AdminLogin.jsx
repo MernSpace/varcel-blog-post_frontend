@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 import Logo from '../../assets/image/logo.svg'
 import {Link} from "react-router-dom";
 import AdminStore from '../../store/adminStore/adminStore';
@@ -9,10 +9,8 @@ const AdminLogin = () => {
 
     const {AdminLoginFormData,AdminLoginFormOnChange,AdminLoginRequest} = AdminStore()
     const onSubmitBtnClick=async()=>{
-        let res = await AdminLoginRequest(AdminLoginFormData);
-        if(res){
-            window.location.href=('/')
-        }
+        alert('i am cliked')
+       await AdminLoginRequest(AdminLoginFormData);
     }
 
    

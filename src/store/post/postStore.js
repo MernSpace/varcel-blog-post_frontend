@@ -17,8 +17,12 @@ const postStore = create((set)=>({
         let res = await axios.post("http://localhost:5050/api/v1/create-post",postBody);
         return res.data['status']=== "success";
     },
-    postListRequest:async()=>{
-        let res = await axios.get("http://localhost:5050/api/v1/read-post/:pageNo/:perPage/:searchKeyword")
+
+    postList:[],
+
+    postListRequest:async(pageNo, perPage, searchKeyword)=>{
+        let res = await axios.get(`http://localhost:5050/api/v1/read-post/${pageNo}/${perPage}/${searchKeyword}`)
+        set({postList:res.data['data'][0]['Rows']})
         return res.data['status'] === "success"
     },
     deletePostRequest:async(postID)=>{
@@ -39,7 +43,7 @@ const postStore = create((set)=>({
         }
     },
     commentList:[],
-    commnetByPostRequest:async(postID)=>{
+    commentByPostRequest:async(postID)=>{
         let res = await axios.get(`http://localhost:5050/api/v1/comment-by-post/${postID}`);
         if(res.data['data'].length>0){
             set({commentList:res.data['data'][0]})

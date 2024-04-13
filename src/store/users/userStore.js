@@ -1,6 +1,6 @@
 import {create} from 'zustand';
-import axios  from "axios";
-import {getEmail, setEmail, unauthorized} from "../../helper/utility.js";
+import axios from "axios";
+import {getEmail, unauthorized} from "../../helper/utility.js";
 import Cookies from "js-cookie";
 const UserStore=create((set)=>({
 
@@ -19,10 +19,10 @@ const UserStore=create((set)=>({
     },
 
     loginRequest:async(PostBody)=>{
-        set({isFormSubmit:true})
+
         let res = await axios.post('https://localhost:5050/api/v1/Login',PostBody);
         return res.data['status'] === 'success'
-        set({isFormSubmit:false})
+
     },
     userFormData:{email:"",password:"",name:"",phone:""},
     userFormOnChange:(name,value)=>{
@@ -34,10 +34,10 @@ const UserStore=create((set)=>({
         }))
     },
    createUserRequest:async(PostBody)=>{
-        set({isFormSubmit:true})
+
         let res =  await axios.post('https://localhost:5050/api/v1/Registration',PostBody);
         return res.data['status'] === "success"
-        set({isFormSubmit:false})
+
    },
 
 
@@ -54,10 +54,10 @@ userProfileUpdateRequest:async(PostBody)=>{
 
 
    userLogoutRequest:async()=>{
-    set({isFormSubmit:true})
+
     let res =  await axios.post('https://localhost:5050/api/v1/Logout');
     return res.data['status'] === "success"
-    set({isFormSubmit:false})
+
 },
 
 

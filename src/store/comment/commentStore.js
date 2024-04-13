@@ -4,7 +4,7 @@ import axios  from "axios";
 
 const commentStore = create((set)=>({
     commentFormData:{description:"",postID:"",userEmail:"",userName:''},
-    commnetFormOnChange:(name,value)=>{
+    commentFormOnChange:(name,value)=>{
         set((state)=>({
             commentFormData:{
                 ...state.commentFormData,
@@ -25,7 +25,7 @@ const commentStore = create((set)=>({
         let res = await axios.post(`http://localhost:5050/api/v1/update-comment/${commentID}`,postBody);
         return res.data['status'] === 'success'
     },
-    commentDeteleRequest:async(commentID)=>{
+    commentDeleteRequest:async(commentID)=>{
         let res = await axios.post(`http://localhost:5050/api/v1/delete-comment/${commentID}`);
         return res.data['status']==='success'
     },
@@ -34,7 +34,7 @@ const commentStore = create((set)=>({
         if(res.data['data'].length>0){
             set({commentFormData:res.data['data'][0]})
         }else{
-
+            return res.data['status'] === 'fail'
         }
     },
     totalCommentRequest:async()=>{
@@ -45,4 +45,4 @@ const commentStore = create((set)=>({
 }))
 
 
-export default categoryStore;
+export default commentStore;
