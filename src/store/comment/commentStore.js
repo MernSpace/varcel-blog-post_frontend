@@ -14,7 +14,7 @@ const commentStore = create((set)=>({
     },
 
     createCommentRequest:async(postBody)=>{
-        let res = await axios.post('http://localhost:5050/api/v1/create-commnet',postBody);
+        let res = await axios.post('http://localhost:5050/api/v1/create-comment',postBody);
         return res.data['status'] ==='success'
     },
     commentListRequest:async()=>{

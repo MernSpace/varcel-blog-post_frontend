@@ -1,10 +1,11 @@
 import React from 'react';
 import MasterLayout from '../masterLayout/layout/MasterLayout';
+import HomeComponent from "../component/home/home-component.jsx";
 
 const HomePage = () => {
     return (
         <MasterLayout>
-            <h1>Homw</h1>
+            <HomeComponent/>
         </MasterLayout>
     );
 };

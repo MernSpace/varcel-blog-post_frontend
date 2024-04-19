@@ -11,6 +11,7 @@ const AdminLogin = () => {
     const onSubmitBtnClick=async()=>{
         alert('i am cliked')
        await AdminLoginRequest(AdminLoginFormData);
+        
     }
 
    

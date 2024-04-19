@@ -1,13 +1,14 @@
 import React, {Fragment} from 'react';
 import postStore from "../../store/post/postStore.js";
-import CommentSlider from "./comment-slider.jsx";
+import CommentFrom from "./comment-from.jsx";
+
 
 const BlogDetail = () => {
     const {postDetail} = postStore()
     return (
         <Fragment>
-            <div className='mt-[60px] mb-[30px] '>
-                <div className='mx-[30px]'>
+            <div className='mt-[60px] mb-[30px] padding-x-y '>
+                <div className='px-[30px] mx-30'>
                     <div className='w-full overflow-hidden lg:h-[720px]'>
                         <img src={postDetail['image']} className='h-full w-full rounded-lg object-cover'/>
                     </div>
@@ -40,7 +41,7 @@ const BlogDetail = () => {
                         </div>
                     </div>
                     <div className='mt-30px'>
-                        <CommentSlider/>
+                      <CommentFrom/>
                     </div>
 
                 </div>

@@ -26,3 +26,9 @@
     border: 1px solid;
     margin-bottom: 30px;
 }
+
+
+.padding-x-y{
+    padding-left: 70px;
+    padding-right: 70px;
+}
