@@ -5,7 +5,7 @@ import Node from '../../assets/image/node.png'
 import Geact from '../../assets/image/react.png'
 import Figma from '../../assets/image/figma.png'
 import Show from '../../assets/image/show-1.png'
-import Logo from '../../assets/image/logo.svg'
+import Logo from '../../assets/image/lgo-removebg.png'
 const HomeComponent = () => {
     return (
         <div className='relative z-[999]'>
@@ -83,7 +83,7 @@ const HomeComponent = () => {
                                             className=" grid gap-[34px] rounded-lg border-2 border-dotted border-text p-[20px]">
                                             <h3 className="text-center text-[24px]">About Us</h3>
                                             <div className="flex  justify-around  p-[10px]">
-                                                <img src={Logo}
+                                                <img src={Logo} style={{ width: '100px', height: 'auto' }}
                                                      alt="" />
                                             </div>
                                         </div>

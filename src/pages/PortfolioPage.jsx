@@ -1,7 +1,7 @@
 import React from 'react';
 import MasterLayout from "../masterLayout/layout/MasterLayout.jsx";
 
-const ProtfolioPage = () => {
+const PortfolioPage = () => {
     return (
         <MasterLayout>
 
@@ -9,4 +9,4 @@ const ProtfolioPage = () => {
     );
 };
 
-export default ProtfolioPage;
+export default PortfolioPage;

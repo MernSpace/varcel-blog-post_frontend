@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import Logo from '../../assets/image/logo.svg'
+import Logo from '../../assets/image/lgo-removebg.png'
 import {NavLink} from "react-router-dom";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
                     <div className=' flex justify-between rounded-[10px] bg-card px-[15px]  py-[30px] md:px-[30px]'>
                         <div className='logo flex items-center '>
                             <NavLink to='/'>
-                                <img src={Logo}/>
+                                <img src={Logo} className='' style={{ width: '100px', height: 'auto' }} />
                             </NavLink>
                         </div>
                         <menu className='hidden items-center lg:flex'>
@@ -26,7 +26,7 @@ const Header = () => {
                                     }>About Us</NavLink>
                                 </li>
                                 <li className='navNotActive'>
-                                    <NavLink to='/protfolio' className={({ isActive, isPending }) =>
+                                    <NavLink to='/portfolio' className={({ isActive, isPending }) =>
                                         isPending ? "navNotActive" : isActive ? "navActive" : ""
                                     }>Portfolio</NavLink>
                                 </li>

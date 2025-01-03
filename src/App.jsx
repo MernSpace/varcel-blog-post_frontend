@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import AdminLoginPage from './pages/AdminLoginPage';
 import ForgetPasswordPage from "./pages/ForgetPasswordPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
-import ProtfolioPage from "./pages/ProtfolioPage.jsx";
+import PortfolioPage from "./pages/PortfolioPage.jsx";
 import ServicePage from "./pages/ServicePage.jsx";
 import BolgPage from "./pages/BolgPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
@@ -17,7 +17,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<HomePage/>} />
         <Route path='/about-us' element={<AboutPage/>} />
-        <Route path='/protfolio' element={<ProtfolioPage/>} />
+        <Route path='/portfolio' element={<PortfolioPage/>} />
         <Route path='/service' element={<ServicePage/>} />
         <Route path='/blog' element={<BolgPage/>} />
         <Route path='/contact' element={<ContactPage/>} />
