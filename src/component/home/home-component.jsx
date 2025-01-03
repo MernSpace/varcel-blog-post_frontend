@@ -15,7 +15,7 @@ const HomeComponent = () => {
                         <div className='grid grid-cols-12 gap-[30px]'>
                             <div className='order-2 col-span-12 mt-[40px] py-[40px] md:mt-0 md:pr-[60px] lg:order-1 lg:col-span-8'>
                                 <p className='text-[22px]'>
-                                    <span className='text-theme'>HELLO!</span>
+                                    <span className='text-theme'>HELLO! </span>
                                     There
                                 </p>
                                 <h2 className='relative mt-[20px] inline-block text-[32px]  font-semibold leading-tight md:text-[62px]'>
@@ -26,11 +26,11 @@ const HomeComponent = () => {
                                 </h2>
                                 <h2 className=' text-[52px] font-semibold leading-tight md:text-[62px]'>
                                     CREATIVE
-                                    <span className='text-theme'>DEVELOPER!</span>
+                                    <span className='text-theme'> DEVELOPER!</span>
                                 </h2>
                                 <br/>
                                 <p className='text-text'>
-                                    I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences. With a strong foundation in design principles and a keen eye for detail, I specialize in translating complex ideas into user-friendly interfaces that captivate and engage. 2024
+                                    I'm a passionate web designer with a mission to create delightful and intuitive digital experiences. With a strong foundation in design principles and a keen eye for detail, I specialize in translating complex ideas into user-friendly interfaces that captivate and engage. 2022
                                 </p>
                                 <div className='mt-[50px]'>
                                     <a href='/' className='btn'>Download CV</a>
