@@ -6,7 +6,16 @@ import Geact from '../../assets/image/react.png'
 import Figma from '../../assets/image/figma.png'
 import Show from '../../assets/image/show-1.png'
 import Logo from '../../assets/image/lgo-removebg.png'
+import CV from '../../assets/image/saharul sifat.pdf'
 const HomeComponent = () => {
+
+    const handleDownload = () => {
+        // Create an invisible link
+        const link = document.createElement('a');
+        link.href = CV;
+        link.download = 'saharul_sifat.pdf'; // Set the filename for the download
+        link.click(); // Simulate a click to download
+    };
     return (
         <div className='relative z-[999]'>
             <div className='main__body'>
@@ -33,7 +42,7 @@ const HomeComponent = () => {
                                     I'm a passionate web designer with a mission to create delightful and intuitive digital experiences. With a strong foundation in design principles and a keen eye for detail, I specialize in translating complex ideas into user-friendly interfaces that captivate and engage. 2022
                                 </p>
                                 <div className='mt-[50px]'>
-                                    <a href='/' className='btn'>Download CV</a>
+                                    <button onClick={handleDownload} className='btn'>Download CV</button>
                                 </div>
                                 <div className='mt-[60px] grid grid-cols-12 gap-[30px] md:gap-[30px]'>
                                     <div className='col-span-12 md:col-span-4'>
