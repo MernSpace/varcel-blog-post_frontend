@@ -6,7 +6,7 @@ import Geact from '../../assets/image/react.png'
 import Figma from '../../assets/image/figma.png'
 import Show from '../../assets/image/show-1.png'
 import Logo from '../../assets/image/lgo-removebg.png'
-import CV from '../../assets/image/saharul sifat.pdf'
+import CV from '../../assets/image/resume.pdf'
 const HomeComponent = () => {
 
     const handleDownload = () => {
